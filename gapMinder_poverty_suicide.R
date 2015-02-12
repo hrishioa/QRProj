@@ -1,4 +1,4 @@
-#Add the poverty file - change this when the file location changes
+#Add the poverty file, transpose it and get rid of the fat - change this when the file location changes
 poverty <- read.csv("~/R Projects/WRProject1/poverty.csv")
 poverty <- t(poverty)
 poverty <- poverty[-1,]
@@ -11,12 +11,15 @@ suicide <- suicide[-1,]
 View(suicide)
 
 #select only the data you want from poverty and store it in temp
-temp <- data.frame(row.names(poverty),poverty[,25])
+#row 25 is the year 2010 - modify this.
+year_row_poverty = 25
+temp <- data.frame(row.names(poverty),poverty[,year_row_poverty])
 names(temp)[1] <- "Country"
 names(temp)[2] <- "2002P"
 
 #select only the data you want from suicide and store it in temp
-temp2 <- data.frame(row.names(suicide),suicide[,53])
+year_row_suicide = 53
+temp2 <- data.frame(row.names(suicide),suicide[,year_row_suicide])
 names(temp2)[1] <- "Country"
 names(temp2)[2] <- "2002S"
 
