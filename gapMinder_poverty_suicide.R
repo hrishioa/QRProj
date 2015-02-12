@@ -50,7 +50,7 @@ View(Countries.Continents.csv)
 #Once again, get the most important data
 Continents <- Continents[,1:2]
 
-#Select for common countries
+#Select for common countries in the continents files
 Continents <- subset(Continents,Continents$Country %in% final_data$Country)
 
 #Merge the datasets
