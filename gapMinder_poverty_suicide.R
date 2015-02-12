@@ -56,7 +56,7 @@ Continents <- subset(Continents,Continents$Country %in% final_data$Country)
 #Merge the datasets
 final_data <- merge(x=Continents,y=final_data)
 
-#plot the old data but with region based regression lines
+#plot the old data but with region based regression lines and in different colors
 graph <- ggplot(final_data,aes(x=Poverty,y=Suicide))
 (graph <- graph + geom_point(data=final_data,size=2,aes(color=Continent)))
 (graph <- graph + geom_smooth(data=final_data[final_data$Continent=='Africa',],aes(x=Poverty,y=Suicide,color=Continent),size=1))
