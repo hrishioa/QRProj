@@ -1,8 +1,10 @@
+#Add the poverty file - change this when the file location changes
 poverty <- read.csv("~/R Projects/WRProject1/poverty.csv")
 poverty <- t(poverty)
 poverty <- poverty[-1,]
 View(poverty)
 
+#adds, transposes and edits the suicide file, same as before
 suicide <- read.csv("~/R Projects/WRProject1/suicide.csv")
 suicide <- t(suicide)
 suicide <- suicide[-1,]
