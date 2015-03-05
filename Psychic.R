@@ -17,4 +17,4 @@ ggplot(data=psy)+geom_histogram(aes(x=psychic,fill='Observed'),binwidth=2)+geom_
 psy2 <- data.frame(psy=rep(psychic,100),rand=rbinom(1300,25,0.2))
 
 #new plot
-ggplot(data=psy2)+geom_histogram(aes(x=psychic,fill='Observed'),binwidth=2)+geom_histogram(alpha=0.5,aes(x=rand,fill='Random'),binwidth=2)
+  ggplot(data=psy2)+geom_histogram(aes(x=psychic,fill='Observed'),binwidth=2)+geom_histogram(alpha=0.5,aes(x=rand,fill='Random'),binwidth=2)
