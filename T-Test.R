@@ -12,3 +12,5 @@ low <- c(estimate$MeanRatio[17:35])
 library(ggplot2)
 
 ggplot()+geom_histogram(data=estimate[1:17,],aes(x=MeanRatio,fill='High'))+geom_histogram(data=estimate[17:35,],aes(x=MeanRatio,fill='Low'))
+
+t.test(low,high)
