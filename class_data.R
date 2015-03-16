@@ -23,4 +23,4 @@ normalizedCD <- data.frame(normalizedCD, 'pulse' = scale(as.numeric(class_data[,
 
 View(normalizedCD)
 
-ggplot(normalizedCD, aes(x=x))+geom_smooth(aes(y=sleep,color='red'))+geom_smooth(aes(y=happy,color='blue'))
+ggplot(normalizedCD, aes(x=x))+stat_smooth(aes(y=sleep,color='red'),se=F)+stat_smooth(aes(y=happy,color='blue'),se=F)+stat_smooth(aes(y=haircolor,color='green'),se=F)+stat_smooth(aes(y=age,color='yellow'),se=F)+stat_smooth(aes(y=height,color='height'),se=F)+stat_smooth(aes(y=weight,color='weight'),se=F)+stat_smooth(aes(y=height,color='height'),se=F)+stat_smooth(aes(y=coffee,color='coffee'),se=F)+stat_smooth(aes(y=questions,color='questions'),se=F)+stat_smooth(aes(y=leftfoot,color='leftfoot'),se=F)+stat_smooth(aes(y=pulse,color='pulse'),se=F)
