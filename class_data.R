@@ -22,3 +22,5 @@ normalizedCD <- data.frame(normalizedCD, 'leftfoot' = scale(as.numeric(class_dat
 normalizedCD <- data.frame(normalizedCD, 'pulse' = scale(as.numeric(class_data[,12])))
 
 View(normalizedCD)
+
+ggplot(normalizedCD, aes(x=x))+geom_smooth(aes(y=sleep,color='red'))+geom_smooth(aes(y=happy,color='blue'))
