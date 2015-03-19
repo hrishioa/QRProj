@@ -1,4 +1,8 @@
 #GPL Function
+R2 = 0
+Int = 0
+Slp = 0
+
 ggplotRegression <- function (fit) 
 {
   
@@ -24,8 +28,12 @@ View(Wine)
 Wine = Wine[!is.na(Wine$LPRICE2),]
 
 #Create a linear model
-lmod = lm(TIME_SV ~ LPRICE2, data=Wine)
+lmod = lm(LPRICE2 ~ TIME_SV, data=Wine)
+summary(lmod)$adj.r.squared
+lmod$coef[[1]]
+lmod$coef[[2]]
+
 ggplotRegression(lmod)
 
 #Plot
-ggplot(data=Wine,aes(x=TIME_SV,y=LPRICE2))+geom_point()+geom_smooth()+geom_smooth(method=lm,color='red',se=FALSE)
+#ggplot(data=Wine,aes(x=TIME_SV,y=LPRICE2))+geom_point()+geom_smooth()+geom_smooth(method=lm,color='red',se=FALSE)
