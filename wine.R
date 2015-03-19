@@ -36,4 +36,4 @@ lmod$coef[[2]]
 ggplotRegression(lmod)
 
 #Plot
-#ggplot(data=Wine,aes(x=TIME_SV,y=LPRICE2))+geom_point()+geom_smooth()+geom_smooth(method=lm,color='red',se=FALSE)
+ggplot(data=Wine,aes(x=TIME_SV,y=LPRICE2))+geom_point()+geom_smooth()+geom_smooth(method=lm,color='red',se=FALSE)
