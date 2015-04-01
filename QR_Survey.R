@@ -16,3 +16,9 @@ Sel <- data.frame(Loneliness=QRSCV$Loneliness,TimeRoom=QRSCV$HoursRoom)
 
 #Sort
 Sel[order(Sel$Loneliness),]
+
+#Get the means
+means <- c(mean(Sel[Sel$Loneliness==1,2]),mean(Sel[Sel$Loneliness==2,2]),mean(Sel[Sel$Loneliness==3,2]),mean(Sel[Sel$Loneliness==4,2]),mean(Sel[Sel$Loneliness==5,2]),mean(Sel[Sel$Loneliness==6,2]))
+
+#Connect the data
+Sel2 <- data.frame(Loneliness = c(1:6), TimeRoom = means)
