@@ -9,4 +9,10 @@ plotcorr(round(cor(QRSCV),2))
 colors <- colorRamp(c('#CC0000','white','#3366CC'),space='Lab')
 cors = round(cor(QRSCV),2)
 
-plotcorr(cors, color=rgb(colors((cors+1)/2),maxColorValue=255),mar=c(0.1,0.1,0.1,0.1)
+plotcorr(cors, color=rgb(colors((cors+1)/2),maxColorValue=255),mar=c(0.1,0.1,0.1,0.1))
+
+#Select the data found
+Sel <- data.frame(Loneliness=QRSCV$Loneliness,TimeRoom=QRSCV$HoursRoom)
+
+#Sort
+Sel[order(Sel$Loneliness),]
