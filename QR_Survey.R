@@ -13,7 +13,10 @@ Sel[order(Sel$Loneliness),]
 
 #Build and print linear model
 lmfit = lm(Sel$TimeRoom ~ Sel$Loneliness)
-lmfit
+
+plot(lmfit)
+
+ggplot(data=Sel,aes(x=Loneliness,TimeRoom))+geom_point()+geom_smooth(method='lm')
 
 #Get the means
 means <- c(mean(Sel[Sel$Loneliness==1,2]),mean(Sel[Sel$Loneliness==2,2]),mean(Sel[Sel$Loneliness==3,2]),mean(Sel[Sel$Loneliness==4,2]),mean(Sel[Sel$Loneliness==5,2]),mean(Sel[Sel$Loneliness==6,2]))
@@ -24,3 +27,7 @@ Sel2 <- data.frame(Loneliness = c(1:6), TimeRoom = means)
 library(ggplot2)
 #Plot the graph
 ggplot(data=Sel2,aes(x=Loneliness,TimeRoom))+geom_line()+geom_smooth(method='lm')
+
+lm2 = lm(Sel2$Loneliness ~ Sel2$TimeRoom)
+
+plot(lm2)
