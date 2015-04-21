@@ -32,7 +32,6 @@ PD <- PD[order(PD[,1]),]
 #Combine the Datasets for the current Year
 
 
-
 #Supplementary Info
 Supp_GDP <- read.csv("~/Dropbox/Yale-NUS College/Y1Sem2/QR/Supp_GDP.csv")
 Supp_HDI <- read.csv("~/Dropbox/Yale-NUS College/Y1Sem2/QR/Supp_HDI.csv")
@@ -83,3 +82,12 @@ S_HDI <- subset(S_HDI,S_HDI$Year %in% S_GDP$Year)
 
 S_BMI <- subset(S_BMI,S_BMI$Year %in% S_HDI$Year)
 S_BMI <- subset(S_BMI,S_BMI$Year %in% S_GDP$Year)
+
+
+#OECD filter
+OECDBMI <- Supp_BMI
+OECDBMI <- subset(OECDBMI,OECDBMI$Year %in% OECDCon)
+OECDHDI <- Supp_HDI
+OECDHDI <- subset(OECDHDI,OECDHDI$Year %in% OECDCon)
+OECDGDP <- Supp_GDP
+OECDGDP <- subset(OECDGDP,OECDGDP$Year %in% OECDCon)
