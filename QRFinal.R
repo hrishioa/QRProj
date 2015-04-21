@@ -37,6 +37,7 @@ Supp_GDP <- read.csv("~/Dropbox/Yale-NUS College/Y1Sem2/QR/Supp_GDP.csv")
 Supp_HDI <- read.csv("~/Dropbox/Yale-NUS College/Y1Sem2/QR/Supp_HDI.csv")
 Supp_BMI <- read.csv("~/Dropbox/Yale-NUS College/Y1Sem2/QR/Supp_BMI.csv")
 
+OECDCon <- c('Australia','Austria','Belgium','Canada','Chile','Czech Republic','Denmark','Estonia','Finland','Greece','France','Germany','Hungary','Iceland','Ireland','Israel','Italy','Japan','South Korea','Luxembourg','Mexico','Netherlands','New Zealand','Norway','Poland','Portugal','Slovak Republic','Solvenia','Spain','Sweden','Switzerland','Turkey','United Kingdom','United States')
 
 #Get only the current year
 Supp_GDP <- Supp_GDP[,c(1,49)]
