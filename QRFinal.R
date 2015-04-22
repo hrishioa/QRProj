@@ -92,3 +92,8 @@ OECDHDI <- Supp_HDI
 OECDHDI <- subset(OECDHDI,OECDHDI$Year %in% OECDCon)
 OECDGDP <- Supp_GDP
 OECDGDP <- subset(OECDGDP,OECDGDP$Year %in% OECDCon)
+
+#Plot comparison
+boxplot(OECDBMI$X2008,S_BMI$X2008)
+boxplot(OECDHDI$X2011,S_HDI$X2011)
+boxplot(OECDGDP$X2011,S_GDP$X2011)
